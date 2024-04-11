@@ -1,4 +1,5 @@
 import React from "react";
+import MeetingTypeList from "@/components/MeetingTypeList";
 
 const Home = () => {
   const now = new Date();
@@ -12,12 +13,11 @@ const Home = () => {
     dateStyle: "full",
   }).format(now);
 
-  
   return (
     <section className=" flex size-full flex-col gap-10 text-white">
-      <div className="h-[300px] w-full rounded-lg bg-hero bg-cover">
+      <div className="h-[300px] w-full rounded-2xl bg-hero bg-cover">
         <div className="flex flex-col justify-between h-full max-md:px-5 max-md:py-8 lg:p-11">
-          <h2 className="max-w-[270px] rounded py-2 text-center font-normal text-base bg-dark-2 bg-opacity-40">
+          <h2 className="max-w-[270px] rounded py-2 text-center font-normal text-base bg-dark-2 bg-opacity-50">
             Upcoming Meeting at: 10:00 AM
           </h2>
           <div className="flex flex-col gap-2">
@@ -26,6 +26,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <MeetingTypeList />
     </section>
   );
 };
